@@ -18,8 +18,8 @@ public class MernisServiceAdapter implements CustomerCheckService {
 
 	@Override
 	public boolean checkIfRealPerson(Customer customer) throws NumberFormatException, RemoteException {
-		boolean result = kpsPublic.TCKimlikNoDogrula(Long.parseLong(customer.nationalityId),
-				customer.firstName.toUpperCase(), customer.lastName.toUpperCase(), customer.dateOfBirth);
+		boolean result = kpsPublic.TCKimlikNoDogrula(Long.parseLong(customer.getNationalityId()),
+				customer.getFirstName().toUpperCase(), customer.getLastName().toUpperCase(), customer.getDateOfBirth());
 		if (result == true) {
 			System.out.println("Basarili");
 			return true;

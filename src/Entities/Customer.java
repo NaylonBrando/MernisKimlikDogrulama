@@ -1,11 +1,11 @@
 package Entities;
 
 public class Customer {
-	public int id;
-	public String firstName;
-	public String lastName;
-	public int dateOfBirth;
-	public String nationalityId;
+	private int id;
+	private String firstName;
+	private String lastName;
+	private int dateOfBirth;
+	private String nationalityId;
 
 	public Customer() {
 
